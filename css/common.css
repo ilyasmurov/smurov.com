@@ -1,0 +1,171 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#loader {
+  width: 100%;
+  min-height: 100vh;
+  visibility: hidden;
+}
+
+#loader.done {
+  visibility: visible;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto auto;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-row.full-width {
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.messages {
+  display: block;
+}
+
+.messages>div {
+  margin: 20px 0 0 0;
+  display: block;
+}
+
+@media all and (min-width: 800px) {
+  .messages {
+    margin: 0;
+    display: inline-block;
+  }
+
+  .messages>div {
+    display: inline-block;
+    margin: 0 0 0 20px;
+  }
+}
+
+.button-skip {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  background: #ff5151;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer !important;
+}
+
+.text span {
+  display: inline-block;
+}
+
+[data-animate] * {
+  /* display: inline-block; */
+  white-space: pre-wrap;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0 0 .3em;
+}
+
+.bb {
+  background: red;
+}
+
+.text {
+  margin: 0 0 1em;
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+a,
+a:visited {
+  display: inline-block;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  color: #fff;
+  background-color: #49b3ff;
+}
+
+a>span {
+  line-height: 28px;
+  padding: 10px;
+}
+
+a.link,
+a.link:visited {
+  border-radius: 0;
+  color: #49b3ff;
+  background-color: transparent;
+  border-bottom: 1px solid #49b3ff;
+}
+
+a.link:hover {
+  border-color: transparent;
+}
+
+a.link>span {
+  padding: 0;
+  line-height: 20px;
+}
+
+.animate {
+  animation: fadeIn .2s cubic-bezier(0.24, 0, 0.64, 1);
+  animation-fill-mode: both;
+  /* position: relative; */
+  cursor: default;
+}
+
+.animate-from-bottom {
+  animation: fromBottom .3s cubic-bezier(0.24, 0, 0.64, 1);
+  animation-fill-mode: both;
+  animation-delay: .4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(5px) scale(.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

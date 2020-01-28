@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Front-end developer & designer.</title>
+  <meta name="description" content="javascript, react/redux, nextjs, html, css, nodejs, react native" />
+  <link href="css/common.css?b" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-19198994-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-19198994-1");
+  </script>
+</head>
+
+<body>
+  <div id="loader">
+    <div id="root">
+      <h1 data-animate="true" data-animate-max-time="500">
+        Hello, how are u?
+      </h1>
+      <div class="text">
+        <span data-animate="true" data-animate-max-time="100" data-animate-delay="3000">
+          My name is <b>Ilya Smurov</b> i'm front-end developer
+          <font color="grey">(javascript, react/redux, nextjs, html, css, nodejs, react native)</font> and designer.
+          Since 2001.</span>
+      </div>
+      <div class="text" data-animate="true" data-animate-max-time="1000" data-animate-delay="2000">
+        :-)
+      </div>
+      <div>
+        <span data-animate="true" data-animate-max-time="60">My </span>
+        <a id="linkedin" href="https://www.linkedin.com/in/ilyasmurov/">
+          <span data-animate="true" data-animate-max-time="60" data-animate-showBeforeAnimation="#linkedin">linkedin
+            profile</span>
+        </a>
+        <a id="github" href="https://github.com/ilyasmurov" style="background-color:#444">
+          <span data-animate="true" data-animate-max-time="60" data-animate-showBeforeAnimation="#github">github</span>
+        </a>
+        <div class="messages">
+          <div>
+            <span data-animate="true" data-animate-max-time="60">email —
+            </span>
+            <a class="link" href="mailto:ilya@smurov.com?subject=hire">
+              <span data-animate="true" data-animate-max-time="60">ilya@smurov.com</span>
+            </a>
+          </div>
+          <div>
+            <span data-animate="true" data-animate-max-time="60">telegram —
+            </span>
+            <span data-animate="true" data-animate-max-time="60">@ilyasmurov</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-skip animate animate-from-bottom">
+        Skip animation
+      </div>
+    </div>
+  </div>
+  <script src="./src/index.js?b"></script>
+</body>
+
+</html>
