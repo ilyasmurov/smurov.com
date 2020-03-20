@@ -48,9 +48,7 @@
       }
 
       // animation queue
-      arr.push(() =>
-        showChar(c, char, getRandom(settings.time.min, settings.time.max))
-      );
+      arr.push(() => showChar(c, char, settings.time.max));
     }
 
     return arr
@@ -63,7 +61,9 @@
           _word = `${tag[0]}${word}${tag[1]}`;
         }
 
-        c.innerHTML = _word;
+        setTimeout(() => {
+          c.innerHTML = _word;
+        }, 2000);
       });
   };
 
@@ -120,7 +120,9 @@
 
         // callback after all animations done
         .then(() => {
-          domElement.innerHTML = text;
+          setTimeout(() => {
+            domElement.innerHTML = text;
+          }, 2000);
         })
     );
   };
