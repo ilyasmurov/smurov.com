@@ -26,8 +26,9 @@
 <body>
   <div id="loader">
     <div id="root">
-      <div class='mouse-animation'>
-        <h1 data-animate="true" data-animate-max-time="500">
+
+      <div class='mouse-animation' data-mouse-animation=40>
+        <h1 data-animate="true" data-animate-max-time="200">
           Hello, how are u?
         </h1>
         <div class="text">
@@ -69,10 +70,15 @@
       <div class="button-skip animate animate-from-bottom">
         Skip animation
       </div>
+
     </div>
+
+    <div id='background'></div>
+
   </div>
-  <script src="./src/index.js?d"></script>
-  <script src="./src/mouse.js?d"></script>
+  <script src="./src/index.js?e"></script>
+  <script src="./src/background.js?e"></script>
+  <script src="./src/mouse.js?e"></script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
 
   let arr = [];
   elements.forEach(() => {
-    arr.push(10 + Math.floor(20 - 10) * Math.random());
+    arr.push(10 + Math.floor(500 * Math.random()));
   });
 
   document.addEventListener("mousemove", e => {
@@ -18,8 +18,11 @@
     const degX = (clientY - midpointY) / midpointY;
 
     elements.forEach((item, index) => {
-      item.style.transform = `translateY(${degX *
-        arr[index]}px) translateX(${degY * arr[index]}px)`;
+      const attr = item.getAttribute("data-mouse-animation") || false;
+      const offset = attr ? attr : arr[index];
+
+      item.style.transform = `translateY(${degX * offset}px) translateX(${degY *
+        offset}px)`;
     });
   });
 })();

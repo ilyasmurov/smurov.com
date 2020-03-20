@@ -8,13 +8,13 @@ body {
 
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 #loader {
   width: 100%;
   min-height: 100vh;
   visibility: hidden;
-  overflow: hidden;
 }
 
 #loader.done {
@@ -33,12 +33,28 @@ body {
   box-sizing: border-box;
 }
 
+#background {
+  position: absolute;
+  left: -200px;
+  right: -200px;
+  top: -200px;
+  bottom: -200px;
+  z-index: -1;
+}
+
+#background>div {
+  position: absolute;
+  background-color: #4e0b0b;
+  border-radius: 50%;
+  /* animation: all .2s ease-in-out; */
+}
+
 .mouse-animation {
   transform: none;
   transform-style: preserve-3d;
   perspective: 550px;
   perspective-origin: 50% 50%;
-  /* animation: all 2s ease-in-out; */
+  animation: all 2s ease-in-out;
 }
 
 .flex-row {
