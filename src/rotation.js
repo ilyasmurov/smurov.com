@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   const elements = document.querySelectorAll(".rotate-animation");
 
   const { clientWidth, clientHeight } = document.body;
@@ -8,8 +9,8 @@
   document.addEventListener("mousemove", e => {
     const { clientX, clientY } = e;
 
-    degX = ((clientX - midpointX) / midpointX) * 8;
-    degY = ((clientY - midpointY) / midpointY) * 8;
+    const degX = ((clientX - midpointX) / midpointX) * 8;
+    const degY = ((clientY - midpointY) / midpointY) * 8;
 
     elements.forEach(item => {
       item.style.transform = `rotateY(${degX}deg) rotateX(${degY}deg)`;
