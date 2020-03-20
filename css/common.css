@@ -14,6 +14,7 @@ body {
   width: 100%;
   min-height: 100vh;
   visibility: hidden;
+  overflow: hidden;
 }
 
 #loader.done {
@@ -30,6 +31,14 @@ body {
   min-height: 100vh;
   padding: 30px;
   box-sizing: border-box;
+}
+
+.rotate-animation {
+  transform: none;
+  transform-style: preserve-3d;
+  perspective: 550px;
+  perspective-origin: 50% 50%;
+  animation: all 2s ease-in-out;
 }
 
 .flex-row {
@@ -82,7 +91,7 @@ body {
 }
 
 [data-animate] * {
-  /* display: inline-block; */
+  display: inline-block;
   white-space: pre-wrap;
 }
 
@@ -147,9 +156,19 @@ a.link>span {
 }
 
 @keyframes fadeIn {
-  0% {
+  /* 0% {
     opacity: 0;
-    transform: translateY(5px) scale(.5);
+    transform: translateY(15px) scale(.5);
+  } */
+
+  0% {
+    color: red;
+    opacity: 0;
+    transform: translateY(0px) scale(100);
+  }
+
+  80% {
+    transform: translateY(0px) scale(.6);
   }
 
   100% {
